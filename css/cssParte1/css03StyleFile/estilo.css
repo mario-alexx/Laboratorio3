@@ -1,0 +1,18 @@
+h1{
+    text-align: center;
+    font-size: 30px;
+    color: darkblue; 
+    background-color: lightblue;           
+}
+
+p{
+    text-align: left;
+    font-size: 20px;
+    color: blue;
+    font-style: italic;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-width: thin;
+    border-color: blue;
+    /*Comentrario*/
+}

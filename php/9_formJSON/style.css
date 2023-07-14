@@ -1,0 +1,116 @@
+html{
+    box-sizing: border-box;
+}
+html, body {
+    width: 100%;
+    height: 100%;
+    font-size: 62.5%;
+    padding: 0%;
+    margin: 0%;
+}
+body {
+    font-size: 14px;
+}
+#principal{
+    height: 100%;
+    width: 100%;
+}
+#principal header{
+    width: 100%;
+    height: 10%;
+    background-color: darkcyan;
+    color: white;
+}
+#medio {
+    width: 100%;
+    height: 80%;
+    background-color: gray;
+}
+#btnModal{
+    width: 15%;
+    height: 5%;
+    background-color: blueviolet;
+    cursor: pointer;
+    border-radius: 5px;
+}
+#btnModal:hover{
+    background-color: rgb(167, 96, 202);
+}
+footer{
+    width: 100%;
+    height: 10%;
+    background-color: darkcyan;
+    color: white;
+}
+#contModal{
+    width: 50%;
+    height: 60%;
+    position: fixed;
+    top: 20%;
+    left: 30%;
+    z-index: 10;
+    border: 1px solid black;
+    background-color: aquamarine;
+    align-items: center;
+    border-radius: 5px;
+}
+#contModal header{
+    background-color: gray;
+    width: 95%;
+    height: 10%;
+    margin-top: 2%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin: auto;
+    border-radius: 5px;
+}
+#cerrar{
+    margin-right: 2%;
+    height: 90%;
+    width: 10%;
+    cursor: pointer;
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+}
+#cerrar:hover{
+    background-color: rgb(247, 71, 71);
+
+}
+.formulario {
+    width: 95%;
+    height: 85%;
+    background-color: rgb(192, 188, 188);
+    margin: auto;
+    border-radius: 5px;
+}
+form{
+    padding-left: 2%;
+}
+#enviar{
+    margin-top: 2%;
+    height: 30px;
+    width: 20%;
+    background-color:forestgreen;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+#enviar:hover{
+    background-color: rgb(79, 139, 79);
+}
+.contenedorOff{
+    opacity: 0.3;
+    pointer-events: none; 
+}
+.modalOn{
+    visibility: visible;
+}
+.modalOff{
+    visibility: hidden;
+}
+
+
+
+

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectores de Clase</title>
+
+    <style>
+        p{
+            margin-bottom: 2em;
+        }
+        .claseResaltado {
+            background-color: yellow;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        .claseAcotacion {
+            padding: 1%;
+            text-align: center;
+            color: blue;
+            font-style: italic;
+            border-style: solid;
+            border-width: thin;
+            border-color: blue;
+        }
+        .claseAyuda {
+            width: 45%;
+            text-align: center;
+            color: darkorange;
+            font-style: italic;
+            border-style: solid;
+            border-width: thin;
+            border-color: darkorange;
+        }
+        .claseContenidoComun{
+            font-size: 22px;
+        }
+        #idUnico {
+            width: 20%;
+            text-align: center;
+            font-size: 19px;
+            color: red;
+            font-style: italic;
+            font-weight: bold;
+            border-style: solid;
+            border-width: thin;
+            border-color: red;
+
+        }
+        .imagenAL50{
+            max-width: 50%;
+        }
+    </style>
+
+</head>
+<body>
+    <p>Proin cursus justo quis mauris convallis iaculis. Phasellus egestas, leo.
+        <span class="claseResaltado">Fusce maximus volutpat erat, et volutpat tortor. </span>
+        Phasellus bibendum augue eu erat facilisis imperdiet.
+    </p>
+
+    <p class="claseAcotacion">Lorem ipsum dolor sit amet. In pellentesque ac lectus et dignissim. Quisque eget ante nec tellus lacinia bibendum ut quis massa. Fusce ipsum sapien, sagittis. Lorem ipsum dolor sit amet. </p>
+
+    <p class="claseResaltado">Vivamus convallis lacus et elit tempor consequat. Aliquam ante ante, pellentesque eu placerat vel, vulputate nec ex.</p>
+    
+    <p class="claseAyuda">Fusce id arcu euismod, semper tellus feugiat, gravida metus. Morbi laoreet aliquet faucibus. Morbi commodo sollicitudin feugiat. Sed mollis aliquet.</p>
+
+    <p class="claseContenidoComun">Parrafo con la Clase -> claseContenidoComun</p>
+
+    <p id="idUnico">Suspendisse aliquet faucibus condimentum. Vivamus vitae consectetur sem. 
+        Sed efficitur quam dolor, et pretium neque congue sit amet. Vestibulum tempus neque.
+    </p>
+
+    <h1>Imagen en la pagina del 50%</h1>
+    <img class="imagenAL50" src="./imagen.jpg" alt="imagen 50%">
+
+</body>
+</html>

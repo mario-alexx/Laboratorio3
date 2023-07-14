@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ventana Modal</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="../materias.js"></script>
+</head>
+<body>
+    <div id="cont">
+        <h1>Esto es el div del contenedor</h1>
+        <input type="button" id="modal" value="Abrir div modal">
+    </div> 
+    <div id="contModal">
+        <header>
+            <h1>Formulario para alta alumno</h1>
+                <input type="button" value="X" id="cerrarModal">        
+        </header>
+        <div class="principal">
+            <form id="form">
+                <div class="caja1">
+                    <label>Legajo:</label>
+                    <input id="legajo" type="number" name="legajo" required="required">
+    
+                    <label>Nombre y Apellido:</label>
+                    <input id="nombre" name="nombre" required="required">
+    
+                    <label for="nota">Nota:</label>  
+                    <input id="nota" type="number" name="notas" required="required"> 
+                </div>
+                <div class="caja2">
+                    <label>Materia:</label>
+                    <select id="lista" name="listaFormulario" required="required"></select>
+                    
+                    <label>Fecha Nacimiento:</label>
+                    <input id="fecha" type="date" name="fecha" required="required">
+                    <input id="enviar" type="submit" value="Enviar"> 
+                </div> 
+            </form>
+        </div>
+        <footer>
+            <h2>Pie del Formulario</h2>
+        </footer>
+    </div>
+</body>
+<script type="text/javascript">
+    
+    var asignatura = JSON.parse(listaMateria);
+    var lista = document.getElementById("lista");
+    var legajo = document.getElementById("legajo");
+    var nombre = document.getElementById("nombre");
+    var nota = document.getElementById("nota");
+    var fecha = document.getElementById("fecha");
+
+    $(document).ready(function(){
+        document.getElementById("cont").className = "contA";
+        document.getElementById("contModal").className = "modalD";
+    
+        asignatura.materia.forEach(function (valor, indice){
+            var opcion = document.createElement("OPTION");
+            opcion.setAttribute("value", valor.cod);
+            opcion.innerHTML = valor.asignatura;
+            lista.appendChild(opcion);
+        });
+    });
+
+    document.getElementById("modal").onclick = function() {
+        document.getElementById("cont").className = "contD";
+        document.getElementById("contModal").className = "modalA";
+    };
+
+    document.getElementById("cerrarModal").onclick = function() {
+        document.getElementById("cont").className = "contA";
+        document.getElementById("contModal").className = "modalD";
+    };
+
+    
+    document.getElementById("form").method="get";
+    document.getElementById("form").action = "../formObj/respu.html";
+
+    document.getElementById("enviar").onclick = function() {
+
+        if(legajo.checkValidity() && nombre.checkValidity() && nota.checkValidity() && lista.checkValidity() && fecha.checkValidity()) {
+            document.getElementById("form").submit();
+        }
+        else {
+            alert("Se debe completar todos los campos");
+        }
+    }
+</script>
+</html>

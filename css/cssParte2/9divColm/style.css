@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+
+img {
+    max-width: 100%;
+    margin: auto;
+
+}
+
+.divPrincipal {
+    width: 90%;
+    margin: auto;
+}
+
+.caja {
+    width:18%;
+    float: left;
+    margin-left: auto;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding: 2%;
+    font-size: 16px;
+    background-color: lightblue;
+}
+
+@media(max-width: 1080px) {
+
+    .caja {
+        width: 23%;
+    }
+}
+
+@media(min-width:764px) and (max-width:930px) {
+    .caja {
+        width: 30%;
+    }
+}
+
+@media(min-width:630px) and (max-width:764px) {
+    .caja {
+        width: 45%;
+    }
+}
+
+@media(max-width:630px){
+    .caja{
+        width: 60%;
+        background-color: yellow;
+    }
+}

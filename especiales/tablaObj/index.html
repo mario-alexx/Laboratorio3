@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla Objetos</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <script src="../alumnoArray.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Tabla Alumnos</h1>
+            <div class="btn">
+                <input type="button" id="carga" value="Cargar Datos">
+                <input type="button" id="vaciar" value="Vaciar">
+            </div>
+    </header>
+        <table>
+            <thead>
+                <tr>
+                    <th>Legajo</th>
+                    <th>Nombre y Apellido</th>
+                    <th>Nota</th>
+                    <th>Fecha</th>
+                </tr>
+            </thead>
+                <tbody id="objDato"></tbody>
+            <tfoot>
+                <tr>
+                    <th>legajo</th>
+                    <th>nombre y apellido</th>
+                    <th>nota</th>
+                    <th>fecha</th>
+                </tr>
+            </tfoot>
+        </table>
+    <footer>
+        <h2>Pie de Pagina</h2>
+    </footer>
+</body>
+<script type="text/javascript">
+
+    var alumnos = JSON.parse(arrayAlumno);
+    var tbody = document.getElementById("objDato");
+    var flag = 0;
+
+    document.getElementById("carga").onclick = function() {
+    
+        if(flag == 0) {
+            alumnos.alumno.forEach(function(valor, indice) {
+            
+                var fila = document.createElement("TR");
+                var celda = document.createElement("TD");
+            
+                celda.setAttribute("campo-dato", "legajo");
+                celda.innerHTML=valor.legajo;
+                fila.appendChild(celda);
+
+                celda = document.createElement("TD");
+                celda.setAttribute("campo-dato", "apellido");
+                celda.innerHTML=valor.apellido;
+                fila.appendChild(celda);
+
+                celda = document.createElement("TD");
+                celda.setAttribute("campo-dato", "nota");
+                celda.innerHTML=valor.nota;
+                fila.appendChild(celda);
+
+                celda = document.createElement("TD");
+                celda.setAttribute("campo-dato", "fecha");
+                celda.innerHTML=valor.fecha;
+                fila.appendChild(celda);
+                
+                tbody.style.visibility="visible";
+                tbody.appendChild(fila);  
+            });   
+            flag++;
+        }
+    }
+
+    document.getElementById("vaciar").onclick = function() {
+        $("#objDato").empty();
+        flag = 0;
+        tbody.style.visibility="hidden";
+    }
+</script>
+</html>

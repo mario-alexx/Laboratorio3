@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variable Obejto a Dato</title>
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .caja1 {
+            background-color: aquamarine;
+            width: 90%;
+            margin: auto;
+        }
+        label {
+            display: block;
+        }
+        .caja1 input {
+            margin-bottom: 1%;
+            display: block;
+        }
+        #crearPersona {
+            padding-left: 3%;
+            padding-right: 3%;
+        }
+        #crearPersona:hover {
+            background-color: rgb(169, 175, 150);
+        }
+        .caja2 {
+            width: 90%;
+            margin: auto;
+        }
+        .caja2 input {
+            padding-left: 1%;
+            padding-right: 1%;
+        }
+        .caja2 input:hover {
+            background-color: rgb(169, 175, 150);
+        }
+    </style>
+</head>
+<body>
+    <div class="caja1">
+        <h2>Adicionar Persona</h2>
+        <label>Nombre:</label>
+        <input id="nombre" required> 
+        <label>Apellido:</label>
+        <input id="apellido" required> 
+        <label>Fecha de Nacimiento:</label>
+        <input id="fechaNac" required>
+        <input type="button" id="crearPersona" value="Crear">
+    </div>
+
+    <div class="caja2">
+        <h2>Control</h2>
+        <input type="button" id="lista" value="Lista Personas">  
+        <input type="button" id="ocultar" value="Ocultar Presentacion">
+    </div> 
+    <div id="presentacion"></div>
+</body>
+    <script type="text/javascript">     
+    
+        var objetoPersona = {nombre:"Pablo", apellido:"Galdi", fechaNac:"01/07/1956"};
+        var arregloPersonas = [objetoPersona];
+        
+        arregloPersonas.push({nombre:"Jose", apellido:"Witt", fechaNac:"17/01/1985"});
+        var objetoPersonas = {personas : arregloPersonas};
+
+        document.getElementById("crearPersona").onclick = function() {
+
+            var nom = document.getElementById("nombre").value;
+            var ape = document.getElementById("apellido").value;
+            var fecha = document.getElementById("fechaNac").value;
+            var  validar = 0;
+
+            if(document.getElementById("nombre").checkValidity()==true){
+                validar+=1;
+            }
+            if(document.getElementById("apellido").checkValidity()==true){
+                validar+=1;
+            }
+            if(document.getElementById("fechaNac").checkValidity()==true){
+                validar+=1;
+            }
+
+            if(validar == 3){
+                objetoPersonas = {nombre:nom, apellido:ape, fechaNac:fecha};
+                arregloPersonas.push(objetoPersonas);
+
+                document.getElementById("nombre").value = "";
+                document.getElementById("apellido").value = "";
+                document.getElementById("fechaNac").value = "";
+                mostrarLista();
+            }
+            else {
+                 alert("Todos los campos deben estar llenos");
+            }
+        }
+
+        function mostrarLista() {
+            document.getElementById("presentacion").style.display="block";
+        
+            var texto = "<h1>Presentacion</h1>";
+            texto += "<table style='border-collapse:collapse; border:solid'>";
+        
+            arregloPersonas.forEach(function(item , indice){
+                texto += "<tr><td style='border-collapse:collapse; border:solid'>" + item .nombre;
+                texto += "<td style='border-collapse:collapse; border:solid'>" + item .apellido;
+                texto += "<td style='border-collapse:collapse; border:solid'>" + item .fechaNac + "</tr>";
+            });
+            texto += "</table>";
+            texto += "<h4>Longitud del arreglo de objetos:" + arregloPersonas.length;
+            document.getElementById('presentacion').innerHTML = texto;
+        }
+        
+        document.getElementById("lista").onclick = function mostrar(){
+            mostrarLista();
+        }
+
+        document.getElementById("ocultar").onclick = function() {
+            document.getElementById("presentacion").style.display="none";
+        }
+   </script>
+</html>

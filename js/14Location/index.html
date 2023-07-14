@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location</title>
+</head>
+<body>
+    <input type="button" id="yt" value="Youtube" title="Youtube">
+    <input type="button" id="sf" value="Source Forge" title="Source Forge">
+    <input type="button" id="gmail" value="Gmail" title="Gmail">
+</body>
+<script type="text/javascript">
+
+    document.getElementById("yt").onclick = function() {
+        location.href="http://www.youtube.com";
+    }
+    document.getElementById("sf").onclick = function() {
+        location.href="http://www.sourceforge.com";
+    }
+    document.getElementById("gmail").onclick = function() {
+        location.href="http://www.gmail.com";
+    }
+</script>
+</html>

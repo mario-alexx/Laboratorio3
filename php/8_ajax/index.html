@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body>
+    <div class="principal">
+        <form id="miFormulario">
+            <div class="caja1">
+                <label for="dato"><h2>Dato de entrada:</h2></label>
+                <input type="text" name="dato" id="dato">
+            </div>
+            <div class="caja2">
+                <h2>Encriptar</h2>
+                <button type="submit" id="enviar"></button>
+            </div>
+        </form>
+        <div id="resultado"><h2>Resultado:</h2></div>    
+        <div id="estado"><h3>Estado del requerimiento:</h3></div>    
+    </div> 
+</body>
+<script>
+    $('#enviar').click(function(event) {
+        event.preventDefault(); // Evita que se envíe el formulario de forma convencional
+
+        var dato = $('#dato').val();
+        $("#resultado").empty();
+        $("#resultado").addClass("estiloRecibiendo");
+        $("#resultado").html("<h2>Esperando respuesta..</h2>");
+        $("#estado").empty(); 
+        $("#estado").append("<h4>Estado... </h4>");
+        
+        $.ajax({
+            type: 'POST',
+            url: 'respuesta.php',
+            data: { dato: dato },
+
+            success: function(respuestaServer, estado) {
+                $("#resultado").removeClass("estiloRecibiendo");
+                $("#resultado").html("<h1>Resultado: </h1><h4>"+respuestaServer+"<h4>");
+                $("#estado").append("<h4>"+estado+"</h4>");
+            }
+        });
+        $('#dato').val('');
+    });
+</script>
+</html>

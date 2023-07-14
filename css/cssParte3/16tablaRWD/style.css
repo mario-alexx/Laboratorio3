@@ -1,0 +1,90 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    background-color:aquamarine;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2%;
+    height: 10vh;
+    font-size: 20px;
+    font-family: cursive;
+
+}
+
+table {
+    height: 80vh;
+    width: 100%;
+    overflow-y:auto;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+thead {
+    background-color:sandybrown;
+    width: 100%;
+    font-family: fantasy;
+}
+
+[dato = 'id'] {
+    width: 10vh;
+}
+[dato = 'nick'] {
+    width: 20vh;
+    
+}
+[dato = 'email'] {
+    width: 20vh;
+}
+[dato = 'web'] {
+    width: 20%;
+    color: white;
+}
+[dato = 'twitter'] {
+    width: 10vh;
+}
+[dato = 'skype'] {
+    width: 20vh;
+}
+
+tbody {
+    background-color: rgb(100, 149, 237);
+}
+
+tbody tr:nth-child(odd) {
+    background-color: rgba(100, 149, 237, 0.1);
+}   
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2%;
+    height: 10vh;
+    background-color: grey;
+}
+
+@media (max-width:1080px) {
+    [dato='skype'] {
+        display: none;
+    }
+}
+@media (max-width:820px) {
+    [dato='twitter'] {
+        display: none;
+    }
+}
+@media (max-width:600px) {
+    [dato='web'] {
+        display: none;
+    }
+}
+
+ 
+ 
+ 

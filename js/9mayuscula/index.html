@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conertir a mayuscula</title>
+</head>
+
+<style>
+    * {
+        box-sizing: border-box;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    div {
+        width: 60%;
+        padding-left: 10px;
+        background-color: aquamarine;
+        align-items: center;
+    }
+    label {
+        margin-top: 10px;   
+        display: block;            
+    }   
+    input {
+        padding-right: 10%;
+        margin-bottom: 10px; 
+    }
+    input:focus {
+        background-color: grey;
+        color: white;
+    }
+
+</style>
+<body>
+    <div>
+        <label>Ingrese Nombre:</label>
+        <input id="nombre" title="ingrese su nombre">
+        <label>Ingrese Apellido:</label>
+        <input id="apellido" title="ingrese su apellido">
+    </div>
+</body>
+
+<script type="text/javascript">
+    document.getElementById("nombre").onchange = function() {
+
+        this.value = this.value.toUpperCase();
+    }
+    document.getElementById("apellido").onchange = function() {
+
+        this.value = this.value.toUpperCase();
+    }
+</script>
+</html>

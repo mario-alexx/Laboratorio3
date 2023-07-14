@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conmutacion de Clase</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        #miLista {
+            height: 300px;
+        }
+        ul {
+            margin-left: 10%;
+        }
+        input {
+            margin-top: 2%;
+            width: 10%;
+        }
+        #tipo1 {
+            margin-left: 2%;
+        }
+        .lista1 {
+            background-color: aqua;
+            width: 30%;
+            border: 3px solid;
+        }
+        .lista1 ul {
+            margin-top: 5%;
+            list-style: square;
+        }   
+        .lista2 {
+            background-color:aquamarine;
+            width: 30%;
+            border: 3px solid blue;
+            color: blue;
+        }
+        .lista2 ul {
+            margin-top: 5%;
+            list-style: circle;
+        } 
+        .lista3 {
+            background-color:burlywood;
+            width: 30%;
+            border: 3px solid red;
+            color: whitesmoke;
+        }
+        .lista3 ul {
+            margin-top: 5%;
+            list-style:lower-latin;
+        } 
+        .lista4 {
+            background-color:lightgreen;
+            width: 30%;
+            border: 3px solid green;
+            color: green;
+        }
+        .lista4 ul {
+            margin-top: 5%;
+        } 
+    </style>
+</head>
+<body>
+    <h1>Ejemplo de cambio de estilo dinamicamente</h1>
+    <div id="miLista">
+        <ul><h2>Lista con estilo</h2>
+            <li>Texto1</li>
+            <li>Texto2</li>
+            <li>Texto3</li>
+        </ul>
+    </div>
+
+    <input type="button" id="tipo1" value="Tipo 1">
+    <input type="button" id="tipo2" value="Tipo 2">
+    <input type="button" id="tipo3" value="Tipo 3">
+    <input type="button" id="tipo4" value="Tipo 4">
+</body>
+<script type="text/javascript">
+
+    document.getElementById("tipo1").onclick = function() {
+        document.getElementById("miLista").className = "lista1";
+    }
+    document.getElementById("tipo2").onclick = function() {
+        document.getElementById("miLista").className = "lista2";
+    }
+    document.getElementById("tipo3").onclick = function() {
+        document.getElementById("miLista").className = "lista3";
+    }
+    document.getElementById("tipo4").onclick = function() {
+        document.getElementById("miLista").className = "lista4";
+    }
+</script>
+</html>

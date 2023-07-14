@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        div{
+            width: 70%;
+            height: 150px;
+            margin: auto;
+            margin-top: 0%;
+            background-color: aquamarine;
+        }
+        label{
+            display: block;
+            margin-top: 2%;
+            margin-left: 2%;
+        }
+        #mes, #dia{
+            display: block;
+            margin-top: 2%;
+            margin-left: 2%;
+        }
+        #enviar {
+            margin-left: 25%;
+        }
+        div #enviar, #reset{
+            margin-top: 3%;
+            padding-left: 10%;
+            padding-right: 10%;
+        }
+    </style>
+</head>
+<body>
+    <h2>Ejer validacion de un Input</h2>
+    <div>
+        <form>
+            <label>Ingrese el dia del mes:</label>
+            <input type="number" id="dia" required>
+            <label>Ingrese el mes:</label>
+            <input type="number" id="mes" required>
+            <input type="submit" id="enviar" value="Enviar">
+            <input type="reset" id="reset" value="Reset">   
+        </form>
+    </div>
+</body>
+<script type="text/javascript">
+
+    var dia = document.getElementById('dia'); 
+    var mes = document.getElementById('mes');
+
+    dia.onkeyup = function() {
+        
+        if(dia.value < 0 || dia.value > 31) {
+            alert("El dia es de 1 al 31");
+            dia.value = "";
+        }
+    }
+    mes.onkeyup = function() {
+
+        if(mes.value < 1 || mes.value > 12) {
+            alert("El mes es de 1 al 12");
+            mes.value = "";
+        }
+    }
+
+    document.getElementById("reset").onclick = function(){
+
+        document.getElementById("formulario").reset();
+    }
+
+    document.getElementById("enviar").onclick = function() {
+        
+        if(dia.checkValidity() && mes.checkValidity()) {
+            document.getElementById("formulario").submit();
+        }
+        else {
+            alert("Debe llenar todos los campos");
+        }
+    }
+</script>
+</html>

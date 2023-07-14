@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla DB</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body>
+    <div class="principal">
+        <header>
+            <h1>Clientes</h1>
+            <div id="btn">
+                <label for="orden">Orden:</label>
+                <input type="text" id="orden" readonly value="dni">
+                <button id="cargar" class="btn">Cargar datos</button>
+                <button id="vaciar" class="btn">Limpiar tabla</button>
+            </div>
+        </header>
+            <table>
+                <thead>
+                    <tr>
+                        <th class="th" campo-dato="dni" id="btnDni">DNI</th>
+                        <th class="th" campo-dato="nombre" id="btnNombre">Nombre</th>
+                        <th class="th" campo-dato="apellido" id="btnApellido">Apellido</th>
+                        <th class="th" campo-dato="provincia" id="btnProvincia">Provincia</th> 
+                        <th class="th" campo-dato="telefono" id="btnTelefono">Telefono</th>
+                        <th class="th" campo-dato="fecha" id="btnFecha">Fecha</th>
+                    </tr>
+                    <tr>
+                        <td class="th" campo-dato="dni"> <input type="text" id="filtroDni"></td>
+                        <td class="th" campo-dato="nombre"> <input type="text" id="filtroNombre"></td>
+                        <td class="th" campo-dato="apellido"> <input type="text" id="filtroApellido"></td>
+                        <td class="th" campo-dato="provincia"> 
+                            <select  id="filtroProvincia">
+                                <option value="">Seleccione una opción</option>
+                            </select>
+                        </td>
+                        <td class="th" campo-dato="telefono"> <input type="tel" id="filtroTelefono"></td>
+                        <td class="th" campo-dato="fecha"> <input type="date" id="filtroFecha"></td>
+                    </tr>
+                </thead>
+                    <tbody id="tbDatos">
+                        <!-- rellenar -->
+                    </tbody>
+            </table>
+        <footer id="footer"><h2>Pie de pagina</h2></footer>
+    </div>
+    <script src="../jquery.js" type="text/javascript"></script>
+    <script src="./script.js" type="text/javascript"></script>
+</body>
+</html>
+

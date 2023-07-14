@@ -1,0 +1,71 @@
+html, body {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    font-size: 62.5%;
+    padding: 0%;
+    margin: 0%;
+}
+body {
+    font-size: 16px;
+}
+.principal {
+    width: 90%;
+    height: 75vh;
+    display: flex;
+    margin: auto;
+    border: 1px solid black;
+    background-color: aquamarine;
+    flex-wrap: wrap;
+}
+form {
+    width: 60%;
+    height: 50%;
+    display: flex;
+}
+h2, h3{
+    padding: 2%;
+}
+input {
+    margin-left: 2%;
+}
+.caja1 {
+    background-color: grey;
+    width: 50%;
+    height: 100%;
+}
+.caja2 {
+    background-color: blue;
+    color: white;
+    width: 50%;
+    height: 100%;
+}
+#resultado {
+    background-color: yellow;
+    width: 40%;
+    height: 50%;
+}
+#resultado h4 {
+    padding: 2%;
+}
+#estado {
+    background-color: green;
+    width: 30%;
+    height: 50%;
+}
+#estado h4{
+    padding: 2%;
+}    
+#enviar{
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Flecha_tesela.svg/1200px-Flecha_tesela.svg.png');
+    background-size: cover;
+    background-position: center;
+    width: 50%;
+    height: 35%;
+    border: none;
+    cursor: pointer;
+    margin-left: 30%;
+}
+
+
+

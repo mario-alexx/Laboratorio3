@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form ABM</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .form{
+            position: fixed; background-color: rgb(112, 172, 231);
+            width: 60%;
+            height: 300px;
+            margin: auto;
+            top: 25%;
+            left: 20%;
+            z-index: 3;
+        }
+        h1, label {
+            margin-left: 4%;
+        }
+        #apellido, #nombre, #saldo{
+            display: block;
+            margin-left: 4%;
+        }
+        .botones {
+            width: 50%;       
+            margin: auto;
+            margin-top: 10%;
+            padding: 10px;
+            text-align: center;
+            background-color: rgb(103, 216, 178);
+        }
+        #reset, #modi, #baja, #alta {
+            padding: 2%;
+            
+        }
+        .texto p{
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="texto">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur inventore ea commodi cupiditate dolorem, corrupti iusto obcaecati tempora veritatis repellat quod quam! Quidem, nemo temporibus voluptatum quis error ab vitae.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur inventore ea commodi cupiditate dolorem, corrupti iusto obcaecati tempora veritatis repellat quod quam! Quidem, nemo temporibus voluptatum quis error ab vitae.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur inventore ea commodi cupiditate dolorem, corrupti iusto obcaecati tempora veritatis repellat quod quam! Quidem, nemo temporibus voluptatum quis error ab vitae.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur inventore ea commodi cupiditate dolorem, corrupti iusto obcaecati tempora veritatis repellat quod quam! Quidem, nemo temporibus voluptatum quis error ab vitae.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur inventore ea commodi cupiditate dolorem, corrupti iusto obcaecati tempora veritatis repellat quod quam! Quidem, nemo temporibus voluptatum quis error ab vitae.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur inventore ea commodi cupiditate dolorem, corrupti iusto obcaecati tempora veritatis repellat quod quam! Quidem, nemo temporibus voluptatum quis error ab vitae.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur inventore ea commodi cupiditate dolorem, corrupti iusto obcaecati tempora veritatis repellat quod quam! Quidem, nemo temporibus voluptatum quis error ab vitae.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur inventore ea commodi cupiditate dolorem, corrupti iusto obcaecati tempora veritatis repellat quod quam! Quidem, nemo temporibus voluptatum quis error ab vitae.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur inventore ea commodi cupiditate dolorem, corrupti iusto obcaecati tempora veritatis repellat quod quam! Quidem, nemo temporibus voluptatum quis error ab vitae.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur inventore ea commodi cupiditate dolorem, corrupti iusto obcaecati tempora veritatis repellat quod quam! Quidem, nemo temporibus voluptatum quis error ab vitae.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur inventore ea commodi cupiditate dolorem, corrupti iusto obcaecati tempora veritatis repellat quod quam! Quidem, nemo temporibus voluptatum quis error ab vitae.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur inventore ea commodi cupiditate dolorem, corrupti iusto obcaecati tempora veritatis repellat quod quam! Quidem, nemo temporibus voluptatum quis error ab vitae.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur inventore ea commodi cupiditate dolorem, corrupti iusto obcaecati tempora veritatis repellat quod quam! Quidem, nemo temporibus voluptatum quis error ab vitae.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur inventore ea commodi cupiditate dolorem, corrupti iusto obcaecati tempora veritatis repellat quod quam! Quidem, nemo temporibus voluptatum quis error ab vitae.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur inventore ea commodi cupiditate dolorem, corrupti iusto obcaecati tempora veritatis repellat quod quam! Quidem, nemo temporibus voluptatum quis error ab vitae.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur inventore ea commodi cupiditate dolorem, corrupti iusto obcaecati tempora veritatis repellat quod quam! Quidem, nemo temporibus voluptatum quis error ab vitae.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur inventore ea commodi cupiditate dolorem, corrupti iusto obcaecati tempora veritatis repellat quod quam! Quidem, nemo temporibus voluptatum quis error ab vitae.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur inventore ea commodi cupiditate dolorem, corrupti iusto obcaecati tempora veritatis repellat quod quam! Quidem, nemo temporibus voluptatum quis error ab vitae.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur inventore ea commodi cupiditate dolorem, corrupti iusto obcaecati tempora veritatis repellat quod quam! Quidem, nemo temporibus voluptatum quis error ab vitae.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur inventore ea commodi cupiditate dolorem, corrupti iusto obcaecati tempora veritatis repellat quod quam! Quidem, nemo temporibus voluptatum quis error ab vitae.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur inventore ea commodi cupiditate dolorem, corrupti iusto obcaecati tempora veritatis repellat quod quam! Quidem, nemo temporibus voluptatum quis error ab vitae.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur inventore ea commodi cupiditate dolorem, corrupti iusto obcaecati tempora veritatis repellat quod quam! Quidem, nemo temporibus voluptatum quis error ab vitae.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur inventore ea commodi cupiditate dolorem, corrupti iusto obcaecati tempora veritatis repellat quod quam! Quidem, nemo temporibus voluptatum quis error ab vitae.</p>
+    </div>
+    <div class="form">
+        <h1>Formulario ABM</h1>
+        <form id="form">
+            <label>Apellido:</label> <br>
+            <input id="apellido" onkeyup="validar()">
+            <label>Nombre:</label> <br>
+            <input id="nombre" onkeyup="validar()">
+            <label>Saldo:</label> <br>
+            <input id="saldo" type="number" title="El saldo debe ser mayor a 100" onkeyup="validar()">
+
+            <div class="botones">
+                <input type="reset" id="reset" value="Blanquear" disabled>
+                <input type="submit" id="alta" value="Alta" disabled>
+                <input type="submit" id="modi" value="Modi" disabled>
+                <input type="submit" id="baja" value="baja" disabled>   
+            </div>
+        </form>
+    </div>
+</body>
+<script type="text/javascript">
+
+function validar() {
+    
+    var apellido = document.getElementById("apellido").value;
+    var nombre = document.getElementById("nombre").value;
+    var saldo = document.getElementById("saldo").value;
+
+    if(apellido !== "" && nombre !== "" && saldo !== "" && saldo > 100) {
+        document.getElementById("reset").disabled = false;
+        document.getElementById("alta").disabled = false;
+        document.getElementById("modi").disabled = false;
+        document.getElementById("baja").disabled = false;
+        
+    }
+    else if(apellido !== "" && nombre !== "" && saldo < 100) {
+        document.getElementById("alta").disabled = true;
+        document.getElementById("modi").disabled = true;
+        document.getElementById("baja").disabled = true;
+    }
+    else if(apellido !== "" || nombre !== "" || saldo !== "") {
+        document.getElementById("reset").disabled = false;
+    }
+    else {
+        document.getElementById("reset").disabled = true;
+        document.getElementById("alta").disabled = true;
+        document.getElementById("modi").disabled = true;
+        document.getElementById("baja").disabled = true;
+    }
+}
+</script>
+</html>

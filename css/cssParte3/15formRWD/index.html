@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <title>Formulario</title>
+</head>
+<body>
+    <header><h1>Formulario</h1></header>
+
+    <form action="../../index.html" target="_blank" method="get">
+        <div class="entrada boton">
+            <label>Apellido:</label>
+            <input id="apellido" autofocus>
+        </div>
+        <div class="entrada boton">
+            <label>Nombre:</label>
+            <input id="nombre">
+        </div>
+        <div class="entrada boton">
+            <label>Contraseña:</label>
+            <input type="password" id="contraseña">
+        </div>
+        <div class="entrada boton">
+            <label>Campo Desabilitado:</label>
+            <input readonly id="desabilitado" placeholder="Valor Desabilitado">
+        </div>
+        <div class="entrada boton">
+            <label>Fecha y Hora:</label>
+            <input type="datetime-local" id="fecha">
+        </div>
+        <div class="entrada boton">
+            <label>DNI:</label>
+            <input type="number" id="dni">
+        </div>
+        <div class="entrada boton">
+            <label>Act Extracurriculares:</label>
+            
+            <label for="musica">Practica Musical</label>
+            <input type="checkbox" id="musica">
+       
+            <label for="arte">Practica de Pintura Artistica</label>
+            <input type="checkbox" id="arte">
+        </div>
+        <div class="entrada boton">
+            <label>Sexo: </label>
+                <label for="masculino">Masculino</label>
+                <input type="radio" id="masculino" name="sexo" value="m">
+                <label for="femenino">Femenino</label>
+                <input type="radio" id="femenino" name="sexo" value="f">
+        </div>
+        <div class="entrada boton">
+            <label>Vacio</label>
+            <input type="hidden" id="vacio">
+        </div>
+        <div class="entrada boton">
+            <label>Estudios Cursados</label>
+                <select id="estudio">
+                    <option value="pri" selected>Primarios</option>
+                    <option value="sec">Secundarios</option>
+                    <option value="ter">Terciarios</option>
+                    <option value="uni">Universitario</option>
+                    <option value="pos">Posgrados</option>
+                </select>
+        </div>
+        <div class="entrada boton">
+            <label>Area de Desempeño:</label>
+                <select id="desempeño">
+                    <option value="admin">Administracion</option>
+                    <option value="teso">Tesoreria</option>
+                    <option value="conta">Contablilidad</option>
+                </select>
+        </div>
+        <div class="entrada boton">
+            <label>Turno</label>
+            <select id="turno">
+                <option value="m">Mañana</option>
+                <option value="t">Tarde</option>
+                <option value="n">Noche</option>
+            </select>
+        </div>
+        <div class="entrada boton">
+            <label>Conduce:</label>
+            <label for="si">SI</label>
+            <input type="radio" id="si" name="conduce" value="si">
+            <label for="no">NO</label>
+            <input type="radio" id="no" name="conduce" value="no">
+        </div>
+        <div class="barraControl">
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Reset">
+        </div>
+    </form>
+    
+    <footer>Pie de página</footer>
+</body>
+</html>

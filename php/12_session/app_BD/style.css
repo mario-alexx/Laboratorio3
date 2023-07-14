@@ -1,0 +1,310 @@
+html,body{
+    width: 100vw;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+#contenedorP{
+    width: 100%;
+    height: 100%;
+}
+
+header,footer{
+    width: 100%;
+    height: 10%;
+    background-color: grey;
+    font-weight: bold;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+footer{
+  justify-content: center;
+}
+
+table{
+    display: block;
+    width: 100vw;
+    height: 80%;
+    border-collapse: collapse;
+    overflow: auto;
+}
+
+.th{
+    text-align: center;
+    box-sizing: border-box;
+    cursor: pointer;
+    background-color: rgb(39, 39, 39);;
+    border-right: 2px solid white;
+
+}
+
+[campo-dato = "dni"]{
+    width: 10vw;
+    color: white;
+}
+
+[campo-dato = "nombre"]{
+    width: 15vw;
+    color: white;
+}
+
+[campo-dato = "apellido"]{
+    width: 15vw;
+    color: white;
+}
+
+[campo-dato = "provincia"]{
+    width: 15vw;
+    color: white;
+}
+
+[campo-dato = "telefono"]{
+    width: 15vw;
+    color: white;
+}
+
+[campo-dato = "fecha"]{
+    width: 15vw;
+    color: white;
+}
+
+[campo-dato = "pdf"]{
+    width: 5vw;
+    pointer-events: none;
+    color: white;
+}
+
+[campo-dato = "modis"]{
+    width: 5vw;
+    pointer-events: none;
+    color: white;
+}
+
+[campo-dato = "bajas"]{
+    width: 5vw;
+    pointer-events: none;
+    color: white;
+}
+
+td{
+    height: 50px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+tbody tr:nth-child(odd){
+    background-color:rgb(21, 71, 66);
+}
+tbody tr:nth-child(even){
+    background-color:rgb(13, 113, 103);
+}
+
+#titulo{
+    height:auto;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+
+#botones{
+    display: flex;
+    width: 70%;
+    justify-content: flex-end;
+    height: 100%;
+    align-items: center;
+    font-size: 24px;
+}
+
+button{
+    height: 80%;
+    justify-content: center;
+    width: 15%;
+    background-color:rgb(98, 185, 98);
+    color: black;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+button:hover{
+    background-color: green;
+    color: white;
+}
+
+.boton{
+    height: 90%;
+    width:auto;
+    color: white;
+    background-color: rgb(39, 39, 39);
+    font-size: 12px;
+}
+#orden{
+    width: 16%;
+    height: 40px;
+    justify-content: center;
+    text-align: center;
+}
+
+thead input{
+    display: block;
+    width: 80%;
+    height: 30px;
+    box-sizing: border-box;
+    margin: auto;
+    border-radius: 5px;
+    color: white;
+}
+
+.modalON{
+    visibility: visible;
+}
+.modalOFF{
+    visibility: hidden;
+}
+
+.contenedorON{
+    pointer-events: all;
+    opacity: 1;
+}
+.contenedorOFF{
+    pointer-events: none;
+    opacity: 0.3;
+}
+
+#modalModif , #modalAlta{
+    width: 60%;
+    height: 55%;
+    position: fixed;
+    top: 20%;
+    left: 20%;
+    border: 1px solid;
+    background-color: black;
+}
+
+#respuestaModal{
+    position: fixed;
+    top: 30%;
+    left: 35%;
+    box-sizing: border-box;
+    width: 600px;
+    height: auto;
+    background-color: lightgray;
+    z-index: 11;
+}
+#respuesta{
+    padding: 20px;
+    box-sizing: border-box;
+    font-weight: bold;
+    color: white;
+}
+
+.encabezado{
+    width: 100%;
+    height: 10%;
+    background-color: rgb(39, 39, 39);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 100%;
+}
+
+.contenedorFormModi{
+    width: 100%;
+    height: 90%;
+}
+
+#formModalModif{
+    width: 100%;
+    height: 100%;
+}
+
+#cerrarModif, #cerrarAlta, #cerrarRespuesta{
+    height: 100%;
+    width: 15%;
+    color: white;
+    background-color: red;
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid white;
+}
+
+#botonCerrar{
+    width: 100%;
+    height: 20%;
+    margin: auto;
+    justify-content: center;
+}
+
+.cont1,.cont2{
+    width: 50%;
+    float: left;
+}
+
+.cont1 label, .cont2 label{
+    display: block;
+    font-size: 100%;
+    margin-bottom: 2%;
+    margin-top: 5%;
+    padding-left: 20%;
+    color: white;
+}
+.cont1 select{
+    width: 60%;
+    height: 2em;
+    font-size: 100%;
+    display: block;
+    margin-left: 20%;
+}
+
+.cont1 input, .cont2 input{
+    width: 60%;
+    height: 2em;
+    font-size: 100%;
+    margin-left: 20%;
+    border-radius: 5px;
+}
+
+#enviarModif, #enviarAlta{
+    font-size: 100%;
+    width: 40%;
+    background-color:rgb(98, 185, 98);
+    color:white;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+    justify-content: center;
+}
+#enviarModif:hover,#enviarAlta:hover{
+    background-color: green;
+}
+
+/*@media (max-width: 900px) {
+    [campo-dato = "cliente"]{
+        width: 20vw;
+    }
+    [campo-dato = "fecha"]{
+        width: 15vw;
+    }
+    [campo-dato = "precio"]{
+        width: 15vw;
+    }
+    thead input , thead select{
+        width: 95%;
+    }
+    #botones{
+        width: 70%;
+    }
+    button{
+        width: 30%;
+    }
+    #orden{
+        width: 35%;
+    }
+}*/

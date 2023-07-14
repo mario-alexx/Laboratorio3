@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 18px;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+}
+
+.principal {
+    width: 90%;
+    height: auto;
+    margin: auto;
+    background-color: lightblue;
+}
+
+.btn {
+    background-color: gray;
+    width: 20%;
+    padding: 2%;
+    float: left;
+    text-decoration: none;
+    text-align: center;
+    transition: width 2s;
+}
+
+.btn:hover {
+    background-color: blue;
+    color: white;
+    width: 25%;
+}
+
+.btn:active {
+    background-color: yellow;
+}
+
+.form {
+    clear: both;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+input {
+    display: block;
+    width: 150px;
+}
+input:focus {
+    background-color: lightblue;
+}
+
+.img {
+    float: left;
+    width: 125px;
+    height: 100px;
+    border: solid;
+    border-width: 10px;
+    border-width: thin;
+    transition: width 1.5s;
+
+}
+.img:active{
+    width: 50%;
+    height: auto; 
+}
+

@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+}
+img {
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+}
+p {
+    font-size: 2vw;
+    font-weight: bold;
+}
+
+.principal {
+    width: 90%;
+    height: 100vw;
+    margin: auto;
+    background-color: lightblue;
+    position: relative;
+}
+
+.contenedor1 {
+    background-color:lightgreen;
+    position: absolute;
+    width: 30%;
+    height: 25%;
+    top: 10%;
+    left: 10%;
+    overflow-y: auto; 
+}
+
+.contenedor3 {
+    background-color:lightcoral;
+    position: absolute;
+    width: 40%;
+    height: 37%;
+    top: 30%;
+    left: 30%;
+    overflow: auto;
+    opacity: 0.5;
+    z-index: 3;
+}
+
+ .contenedor2 {
+    position: absolute;
+    background-color: cornflowerblue;
+    width: 30%;
+    height: 30%;
+    top: 55%;
+    left: 55%;
+    overflow-y: auto;
+    transform: rotateZ(10deg);
+} 
+

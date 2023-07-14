@@ -1,0 +1,107 @@
+* {
+    box-sizing: border-box;
+}
+html, body {
+    width: 100%;
+    height: 100%;
+    font-size: 62.5%;
+    padding: 0%;
+    margin: 0%;
+}
+body {
+    font-size: 13px;
+    font-family: 'Nunito', sans-serif;
+    background-color: rgb(204, 202, 202);
+}
+input{
+    font-family: Arial, Helvetica, sans-serif;
+}
+header {
+    height: 10%;
+    width: 100%;
+    background: rgb(5,240,202);
+    background: linear-gradient(0deg, rgba(5,240,202,0.8) 20%, rgba(38,147,21,0.8) 79%); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.principal {
+    height: 80%;
+    width: 90%;
+    margin: auto;
+    overflow-y: auto; 
+}
+.caja1 {
+    width: 50%;
+    float: left;
+}
+.caja1 label{
+    display: block;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    font-size: 3rem;
+}
+.caja1 input{
+    width: 90%;
+    height: 30px;
+    font-size: 2rem;
+}
+.caja2 {
+    width: 50%;
+    float: left;
+}
+.caja2 label{
+    display: block;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    font-size: 3rem;
+}
+.caja2 input{
+    width: 90%;
+    height: 30px;
+}
+.caja2 option{
+    font-weight: bold;
+}
+.caja2 select{
+    width: 90%;
+    height: 30px;
+}
+#enviar{
+    margin-top: 20%;
+    font-size: 2.5rem;
+    font-family:cursive;
+    font-weight: bold;
+    height: 40px;
+    background-color: rgb(38,147,21);
+    cursor: pointer;
+    border: 2px solid black;
+}
+#enviar:hover{
+    background-color: rgb(5,240,202);
+    border: 1px solid;
+    color: white;
+    border: 2px solid black;
+}
+
+footer{
+    width: 100%;
+    height: 10%;
+    background: rgb(5,240,202);
+    background: linear-gradient(0deg, rgba(38,147,21,0.8) 20%, rgba(5,240,202,0.8) 79%); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+}
+@media (max-width:600px) {
+    .caja2{
+        float: none;
+        margin-left: 25%;
+        
+    }
+    .caja1{
+        margin-left: 25%;
+    }
+} 
+ 

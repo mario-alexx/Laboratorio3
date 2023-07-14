@@ -1,0 +1,1 @@
+var listaMateria = '{"materia":[{"cod":"prog","asignatura":"Programacion lll"},{"cod":"lab","asignatura":"Laboratorio lll"},{"cod":"cont","asignatura":"Org Contable Emp"},{"cod":"ope","asignatura":"Inv Operativa"},{"cod":"org","asignatura":"Org Empresarial"}]}';

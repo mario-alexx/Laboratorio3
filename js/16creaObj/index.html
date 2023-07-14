@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creacion Objeto</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        html, body{
+            width: 100%;
+            height: 100%;
+            font-size: 62.5%; 
+            padding: 0;
+            margin: 0;
+            align-items: center;
+        }
+        body {
+            font-size: 13px;
+        } 
+        #contenedor{
+            width: 75%;
+            height: 50vh;
+            margin: auto;
+            margin-top: 15%; 
+            padding: 5%;
+            overflow-y: auto;
+            background-color:rgb(3, 110, 110);
+            display: block;
+        }
+        .nuevoDiv{
+            width: 50%;
+            height: 60px;
+            background-color:rgb(87, 127, 200);
+            border: 1px solid burlywood;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="cajaP">
+        <input type="button" id="crear" value="Crear">
+        <input type="button" id="limpiar" value="Limpiar">
+        <input type="button" id="info" value="Info">
+    </div>
+    <div id="contenedor" class="contenedor"></div>
+</body>
+<script type="text/javascript">
+
+    var contenedor = document.getElementById("contenedor");      
+
+    document.getElementById("crear").onclick = function() {
+
+        var nuevoDiv = document.createElement("DIV");
+        nuevoDiv.className = "nuevoDiv";
+      
+        var texto = document.createElement("H2");
+        texto.textContent = "Elemento creado: " + contenedor.childNodes.length;
+
+        nuevoDiv.appendChild(texto);
+        contenedor.appendChild(nuevoDiv);
+    }
+
+    document.getElementById("limpiar").onclick = function() {
+
+        while(contenedor.childNodes.length>0) {
+            contenedor.removeChild(contenedor.childNodes[0]);
+        }
+    }
+
+    document.getElementById("info").onclick = function() {
+
+        alert("Longitud de nodos hijos: " + contenedor.childNodes.length);
+        
+        let pos = 0;
+
+        contenedor.childNodes.forEach(Element => 
+        {
+            alert("Indice:" + pos + " innerHtml: " + Element.innerHTML);
+            pos++;
+        });
+        
+    }
+</script>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alcance</title>
+</head>
+<body>
+    <style>
+        button{
+            margin-right: 10%;
+            border: solid;
+            border-style: 1px;
+        }
+        button:hover {
+            background-color: aqua;
+            color:blue;
+        }
+    </style>
+    <button id="varI" title="Inicializa una variable global desde dentro de una funcion">Inicialización Incorrecta</button>
+    <button id="varC" title="Inicializa una variable global desde fuera de una funcion">Inicialización Correcta</button>
+    <button id="muestraVar">Muestra variable global</button>
+</body>
+<script type="text/javascript">
+    
+    document.getElementById("varI").onclick = function() {
+        var varGlobI;
+        varGlobI = prompt("Ingrese valor para la variable global");
+        alert("El valor de la variable ingresada es " + varGlobI);
+        alert("El tipo de la variable ingresada es " +typeof varGlobI);
+    }
+
+    var varGlobC;
+    document.getElementById("varC").onclick = function() {
+        varGlobC = prompt("Ingrese valor para la variable global");
+        alert("El valor de la variable ingresada es " + varGlobC);
+        alert("El tipo de la variable ingresada es " +typeof varGlobC);
+    }
+
+    document.getElementById("muestraVar").onclick = function() {
+        alert("El valor de la variable ingresada es " + varGlobC);
+        alert("El tipo de la variable ingresada es " +typeof varGlobC);
+    }
+
+</script>
+</html>

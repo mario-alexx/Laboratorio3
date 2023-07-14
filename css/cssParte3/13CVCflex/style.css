@@ -1,0 +1,18 @@
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 400px;
+    margin: auto;
+    padding: 3%;
+}
+
+.contenedor {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+
+

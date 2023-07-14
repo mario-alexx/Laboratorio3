@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Html elementos basicos</title>
+</head>
+<body>
+      
+    <header>
+        <h1> <br>Primer Parrafo Corto (incluye el retorno de carro)</h1>
+        <h2>Segundo Parrafo Corto (incluye el retorno de carro)</h2>
+
+        <h2>Grupos elementos de navegacion</h2>
+        
+        <ul>
+            <li><a href="https://espanol.yahoo.com">Yahoo</a></li>
+            <li><a href=" https://www.google.com">Google</a></li>
+            <li><a href="https://www.youtube.com">YouTube</a></li>
+        </ul>
+            
+        <nav style="margin-top: 70px;">
+            <hr/>            
+                <a href="./pagina1.html">Enlace a otra pagina dentro de la misma pestaña</a>
+                <a href="./pagina2.html" style="margin-left: 20px;" target="_blank">Enlace a otra pagina en misma pestaña</a>
+                <a href="#otroLugarDentro" style="margin-left: 20px;">Ancla a otro punto desde esta pagina</a>        
+            <hr/>
+        </nav>
+    </header>
+    
+    <main>
+        <h1 style="margin-top: 50px;">Cuerpo Principal del Contenido</h1>
+
+        <p>La etiqueta main es en HTML5 una etiqueta Semantica. Esto quiere decir que tiene que ver con el significado de lo contenido dentro de ella
+            .Define el contenido principal de la pagina. Unicamente puede haber una sola etiqueta como esta en todo el documento <br>
+            El contenido escrito aqui dentro no se repite en el resto del sitio(todo lo contrario a los encabezados de pagina, los
+            menues de navegacion y los de pie de pagina). Es usado por buscadores para indexar. <br>
+            Conviene usar aqui textos que ayuden a encontrar la pagina luego de procesos de indexacion de los buscadores.
+        </p>
+    </main>
+
+    <section>
+        <article>
+            <h2>Seccion Etiquetas Semanticas Estructurales mas Importantes</h2>
+            <ul>
+                <li>HEADER</li>
+                <li>FOOTER</li>
+                <li>SECTION</li>
+                <li>ARTICLE</li>
+                <li>NAV</li>
+                <li>ADDRESS</li>
+            </ul>
+            <p>Las Etiquetas Semanticas Estructurales estan relacionadas directamente con el significado del contenido y no con los estilos ni las posiciones dentro del documento</p>
+        </article>
+    
+        <article>
+            <h2> Reglas para Etiquetas Semanticas </h2>
+            <ul>
+                <li>Los distintos tipos de contenido se pueden asociar a las etiquetas SECTION.</li>
+                <li>Las unidades de contenido se asocian a las etiquetas ARTICLE. Osea que un SECTION  anida multiples ARTICLES.</li>
+                <li>Las etiquetas HEADER y FOOTER pueden ser anidadas dentro de otros HEADER o FOOTER. Osea un FOOTER podria anidar otro HEADER y FOOTER.</li>
+                <li>La etiqueta NAV debe ser unica en el documento y corresponde a los elementos de navegacion del documento.</li>
+                <li>Reservar etiquetas h1 para usar dentro de etiquetas top level como MAIN, HEADER o FOOTER</li>
+            </ul>
+        </article>
+    </section>
+
+    <section>
+        <h3 style="margin-top: 60px;">Section de Imagenes</h3>
+        <p>En esta seccion mostraremos imagenes significativas de nuestro sitio</p>
+        <p>La siguiente imagen esta insertada en tamaño natural</p>
+
+        <img src="./perrito.jpg" alt="Img perro">
+        
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. <br> 
+            Cumque magni debitis asperiores, excepturi accusamus quas molestias ipsum nesciunt sequi tempora expedita 
+            totam amet eaque eveniet fuga praesentium.<br> Amet, accusantium illum.
+        </p>
+
+        <img src="./perrito.jpg" style="width:100px; height: 300px;" alt="Imagen Perro S">
+        <img src="./perrito.jpg" style="width:150px; height: 300px;" alt="Imagen Perro L">
+        <img src="./perrito.jpg" style="width:250px; height: 300px;" alt="Imagen Perro M">
+        <img src="./perrito.jpg" style="width:350px; height: 300px;" alt="Imagen Perro X">
+        <img src="./perrito.jpg" style="width:450px; height: 300px;" alt="Imagen Perro XXL">
+    </section>
+
+    <!-- <br><br><br> -->
+    <section style="margin-top: 75px;">
+        <hr/>
+        <h3>Seccion de Video</h3>
+        <video src="./videoLAB.mp4" style="width: 650px; height: 400px;" controls></video>
+    </section>
+
+    <h2>Anclajes</h2>
+    <a id="otroLugarDentro">Punto de anclaje</a>
+
+    <footer>
+        <h1>Datos del Alumno</h1>
+        <p>Mario Toro</p>
+        <p>15-27822</p>
+        <address>mtoro822@alumnos.frh.utn.edu.ar</address>
+    </footer>
+
+</body>
+</html>

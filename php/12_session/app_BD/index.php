@@ -1,0 +1,169 @@
+<?php
+    include("./verificacion.php");
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body>
+    <div id="contenedorP">
+        <header>
+            <div id="titulo">
+                <H1 style="color: white;">Clientes</H1>
+            </div>
+
+            <div id="botones">
+                
+                    <label for="ordena">Orden</label>
+                    <input type="text" id="orden" readonly value="dni" >
+                
+                
+                    <button class="botonHeader" id="cargar">Cargar datos</button>
+                    <button class="botonHeader" id="vaciar">Vaciar datos</button>
+                    <button class="botonHeader" id="limpiarFiltros">Limpiar filtros</button>
+                    <button class="botonHeader" id="alta">Alta registro</button>
+                    <button class="botonHeader" id="cerrarSesion">Cerrar Sesion</button>
+            </div>
+        </header>
+
+        <table>
+            <thead>
+
+                <tr>
+                    <th campo-dato="dni" class="th" id="thDni">DNI</th>
+                    <th campo-dato="nombre" class="th" id="thNombre">Nombre</th>
+                    <th campo-dato="apellido" class="th" id="thApellido">Apellido</th>
+                    <th campo-dato="provincia" class="th" id="thProvincia">Provincia</th>
+                    <th campo-dato="telefono" class="th" id="thTelefono">Telefono</th>
+                    <th campo-dato="fecha" class="th" id="thFecha">Fecha</th>
+                    <th campo-dato="pdf" class="th">PDF</th>
+                    <th campo-dato="modis" class="th">Modi</th>
+                    <th campo-dato="bajas" class="th">Baja</th>
+                </tr>
+
+                <tr>
+                    <td campo-dato="dni" class="th"><input type="number" id="filtroDni"></td>
+                    <td campo-dato="nombre" class="th"><input type="text" id="filtroNombre"></td>
+                    <td campo-dato="apellido" class="th"><input type="text" id="filtroApellido"></td>
+                    <td campo-dato="provincia" class="th">
+                        <select id="filtroProvincia" name="filtroProvincia">
+                            <option value="">Seleccione una opcion</option>
+                        </select>
+                    </td>
+                    <td campo-dato="telefono" class="th"><input type="number" id="filtroTelefono"></td>
+                    <td campo-dato="fecha" class="th"><input type="date" id="filtroFecha"></td>
+                    <td campo-dato="pdf" class="th"></td>
+                    <td campo-dato="modis" class="th"></td>
+                    <td campo-dato="bajas" class="th"></td>
+                </tr>
+            </thead>
+            
+            <tbody id="tbDatos"></tbody>
+
+        </table>
+
+        <footer id="footer">Pie</footer>
+    </div>
+
+
+    <div id="modalModif" class="modalOFF">
+
+        <div class="encabezado">
+            <h2 style="color: white;">Formulario modificacion</h2>
+            <button id="cerrarModif">X</button>
+        </div>
+
+        <div class="contenedorFormModi">
+            <form id="formModalModif" action="./modi.php" method="post" enctype="multipart/form-data">
+                
+                <div class="cont1">
+                    <label for="dniModif">DNI:</label>
+                    <input type="number" id="dniModif" name="dniModif" required>
+                   
+                    <label for="nombreModif">Nombre:</label>
+                    <input type="text" id="nombreModif" name="nombreModif" required>
+                    
+                    <label for="apellidoModif">Apellido:</label>
+                    <input type="text" id="apellidoModif" name="apellidoModif" required>
+
+                    <label for="provinciaModif">Provincia:</label>
+                    <select name="provinciaModif" id="provinciaModif" required></select>
+                </div>
+
+                <div class="cont2">
+                    <label for="telefonoModif">Telefono:</label>
+                    <input type="number" id="telefonoModif" name="telefonoModif" required>
+
+                    <label for="fechaModif">Fecha:</label>
+                    <input type="date" id="fechaModif" name="fechaModif" required>
+
+                    <label for="pdfModif">Documento Pdf:</label>
+                    <input type="file" id="pdfModif" name="pdfModif">
+                    <div id="botonCerrar">
+                        <input type="button" id="enviarModif" value="Modificar">
+                    </div>
+                </div>            
+            </form>
+        </div>
+    </div>    
+
+    <div id="modalAlta" class="modalOFF">
+        <div class="encabezado">
+            <div style="color: white;">Formulario de Alta</div>
+            <button id="cerrarAlta">X</button>
+        </div>
+
+        <div class="contenedorFormAlta">
+            <form id="formModalAlta" action="./alta.php" method="post" enctype="multipart/form-data">
+                    
+                <div class="cont1">
+                    <label for="dniAlta">DNI:</label>
+                    <input type="number" id="dniAlta" name="dniAlta" required>
+                   
+                    <label for="nombreAlta">Nombre:</label>
+                    <input type="text" id="nombreAlta" name="nombreAlta" required>
+                    
+                    <label for="apellidoAlta">Apellido:</label>
+                    <input type="text" id="apellidoAlta" name="apellidoAlta" required>
+
+                    <label for="provinciaAlta">Provincia:</label>
+                    <select name="provinciaAlta" id="provinciaAlta" required></select>
+                </div>
+
+                <div class="cont2">
+                    <label for="telefonoAlta">Telefono:</label>
+                    <input type="number" id="telefonoAlta" name="telefonoAlta" required>
+
+                    <label for="fechaAlta">Fecha:</label>
+                    <input type="date" id="fechaAlta" name="fechaAlta" required>
+
+                    <label for="pdfAlta">Documento Pdf:</label>
+                    <input type="file" id="pdfAlta" name="pdfAlta">
+                    <div id="botonCerrar">
+                        <input type="button" id="enviarAlta" value="Dar alta">
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+
+    <div id="respuestaModal" class="modalOFF">
+        <div class="encabezado">
+            <div>Respuesta del servidor</div>
+            <button id="cerrarRespuesta">X</button>
+        </div>
+        <div id="respuesta">
+            Respuesta del Servidor
+        </div>
+    </div>
+</body>
+<script src="../../jquery.js" type="text/javascript"></script>
+<script src="./script.js" type="text/javascript"></script>
+</html>

@@ -1,0 +1,78 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: blue;
+    font-size: 16px;
+}
+
+img {
+    max-width: 100%;
+    margin: auto;
+}
+
+.divPrincipal {
+    margin-left: 5%;
+    width: 80%;
+    height: auto;
+    background-color: wheat;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.caja1 {
+    margin-left: 0;
+    margin-top: 1%;
+    width: 75%;
+    height: 50px;
+    background-color:darkgreen;
+    font-size: 22px;
+}
+
+
+.caja2 {
+    margin-top: 3%;
+    margin-left: 20%;
+    padding: 1%;
+    width: 50%;
+    height: auto;
+    display: block;
+    background-color: yellow;
+    font-weight: normal;
+}
+
+.caja3 {
+    width: 50%;
+    height: 80px;
+    padding-top: 1%;
+    padding-left: 1%;
+    margin-left: 30%;
+    margin-top: 3%;
+    background-color: orangered;
+    overflow-y: auto;
+    font-weight: normal;
+}
+
+.contModal {
+    color: white;
+    padding: 3%;
+    position: fixed;
+    background-color:darkslateblue;
+    width: 50%;
+    margin-right: 10%;
+    height: 300px;
+    top: 18%;
+    left: 28%;
+    opacity: 0.5;
+    visibility: visible;
+    z-index: 10;
+}
+
+
+.img {
+    width: 50%;
+    height: auto;
+    margin-left: 20%;
+    margin-top: 3%;
+    border: 10px solid yellow;
+}

@@ -1,0 +1,21 @@
+div {
+    margin: auto;
+    width: 50%;
+}
+
+.enInterior {   
+    background-color: lightblue;
+}
+
+.PaddingSinBS {
+    padding-left: 10%;
+    padding-right: 10%;
+    background-color: lightgreen;
+}
+
+.PaddingConBS {
+    background-color: lightgoldenrodyellow;
+    padding-left: 10%;
+    padding-right: 10%;
+    box-sizing: border-box;
+}
